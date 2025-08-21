@@ -3,6 +3,7 @@ import Logo from '../components/Logo.astro';
 
 const navItems = [
     { linkText: 'Home', href: '/' },
+    { linkText: '多功能工具', href: '/tools' },
     { linkText: 'Revalidation', href: '/revalidation' },
     { linkText: 'Image CDN', href: '/image-cdn' },
     { linkText: 'Edge Function', href: '/edge' },
@@ -19,7 +20,7 @@ const navItems = [
             <ul class="flex flex-wrap gap-x-4 gap-y-1">
                 {navItems.map((item) => (
                     <li>
-                        <a href={item.href} class="inline-block px-1.5 py-1 sm:px-3 sm:py-2">
+                        <a href={item.href} class="inline-block px-1.5 py-1 sm:px-3 sm:py-2 hover:bg-white/10 rounded transition-colors">
                             {item.linkText}
                         </a>
                     </li>
