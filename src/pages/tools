@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ToolsApp from '../components/ToolsApp.tsx';
+import Markdown from '../components/Markdown.astro';
+
+const explainer = `
+# 多功能工具集
+
+这是一个集成了文档转换、文件管理和图片压缩功能的现代化工具平台。
+
+## 功能特性
+
+- 📄 **文档转换**: 支持 PDF, DOC, DOCX, TXT, MD 格式互转
+- 📁 **文件管理**: 批量重命名、删除、复制、移动文件
+- 🖼️ **图片压缩**: 智能压缩，支持质量调节和格式转换
+
+## 技术架构
+
+- **前端**: React + TypeScript + Tailwind CSS
+- **后端**: Netlify Functions (Serverless)
+- **部署**: Netlify Platform
+`;
+---
+
+<Layout title="多功能工具集">
+    <div class="mb-8">
+        <Markdown content={explainer} />
+    </div>
+    <ToolsApp client:load />
+</Layout>
